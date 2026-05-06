@@ -16,7 +16,8 @@ try:
 except ImportError:
     pass
 
-from pyrorogram import Client, filters
+# ===== IMPORT PYROGRAM (SAHI WALA) =====
+from pyrogram import Client, filters
 from pyrogram.types import Message
 
 # ===== ENVIRONMENT VARIABLES =====
