@@ -1,13 +1,13 @@
-FROM python:3.10-slim
+FROM python:3.11-slim
 
 WORKDIR /app
+
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONIOENCODING=utf-8
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY bot.py .
-COPY start.sh .
 
-RUN chmod +x start.sh
-
-CMD ["./start.sh"]
+CMD ["python", "bot.py"]
